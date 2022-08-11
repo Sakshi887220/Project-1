@@ -34,20 +34,7 @@ public class montyhall {
       userDoor = scan.nextInt();
 
       // validation
-      if (userDoor > 3 || userDoor <= 0) {
-         System.out.print("Please select door 1, 2, or 3");
-         userDoor = scan.nextInt();
-      } else {
-         if(userDoor == goatDoor1) {
-            openDoor = goatDoor2;
-            otherDoor = prizeDoor;
-         } else if(userDoor == goatDoor2) {
-            openDoor = goatDoor1;
-            otherDoor = prizeDoor;
-         } else {
-            openDoor = goatDoor1;
-            otherDoor = goatDoor2;
-         }
+      
 
          System.out.println("\nIn a moment, I will show you " 
                  + " where the prize is located, but first I will"
@@ -74,12 +61,7 @@ public class montyhall {
                            + prizeDoor);
 
          // check if user won or lost
-         if (userDoor == prizeDoor) {
-            System.out.println("Congratulations! You won the prize!");
-         } else {
-            System.out.println("Sorry. You lost the game.");
-         }
-         scan.close();
+         
       }
    }
 }
